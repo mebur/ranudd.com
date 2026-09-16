@@ -1,5 +1,5 @@
-title: Patrik Ranudd
-description: "Indie apps built with a liquid-glass design language: Binaural AudIo and CostCurrent."
+title: Ranudd
+description: "Ranudd"
 url: "https://ranudd.com"
 author: Patrik Ranudd
 contact_email: contact@ranudd.com
@@ -43,8 +43,6 @@ apps:
         alt: "Soundscape picker with Ocean Beach, Old Clock, Submarine and AI options"
       - src: /assets/images/bna/screen-ai-generator.jpg
         alt: "AI soundscape generator with a text prompt field"
-      - src: /assets/images/bna/screen-timer.jpg
-        alt: "Gamma band screen with the sleep timer sheet open"
 
   - id: costcurrent
     name: "CostCurrent"
