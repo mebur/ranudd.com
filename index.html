@@ -23,15 +23,9 @@ description: "Binaural AudIo and CostCurrent — apps for iOS and Android by Pat
 {% for app in site.apps %}
 <section class="app-section app-section--{{ app.id }}" id="{{ app.id | replace: 'bna', 'binaural-audio' }}" style="--accent: {{ app.accent }}; --accent-soft: {{ app.accent_soft }};">
   <div class="wrap">
-    <div class="app-hero">
-      <img class="app-hero__icon" src="{{ app.icon | relative_url }}" alt="{{ app.name }} app icon">
-      <div>
-        <h2 class="app-hero__title">{{ app.name }}</h2>
-        <div class="app-hero__tagline">{{ app.tagline }}</div>
-      </div>
-    </div>
+    <h2 class="visually-hidden">{{ app.name }} — {{ app.tagline }}</h2>
 
-    <img class="feature-graphic" src="{{ app.feature_graphic | relative_url }}" alt="{{ app.name }} feature graphic">
+    <img class="feature-graphic" src="{{ app.feature_graphic | relative_url }}" alt="{{ app.name }} feature graphic: {{ app.tagline }}">
 
     <p class="app-description">{{ app.description }}</p>
 
