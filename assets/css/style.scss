@@ -242,6 +242,22 @@ h1, h2, h3, h4 {
 .btn--ghost { background: var(--glass-bg); color: var(--ink); }
 .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 28px -14px color-mix(in srgb, var(--accent) 70%, transparent); }
 
+.legal-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+  font-size: 0.8rem;
+}
+.legal-links a {
+  color: var(--ink-dim);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.legal-links a:hover { color: var(--ink); }
+.legal-links__dot { color: var(--ink-dim); }
+
 .feature-graphic {
   width: 100%;
   margin-top: 8px;

@@ -5,7 +5,6 @@ description: "Binaural AudIo and CostCurrent — apps for iOS and Android by Pat
 ---
 
 <section class="hero wrap">
-  <span class="hero__eyebrow">Apps by Patrik Ranudd</span>
   <h1>Two focused apps, one liquid‑glass design language.</h1>
   <p>Binaural AudIo helps you focus, sleep and relax. CostCurrent keeps you ahead of electricity prices. Both are private by default and available on iOS and Android.</p>
   <div class="hero__apps">
@@ -38,8 +37,6 @@ description: "Binaural AudIo and CostCurrent — apps for iOS and Android by Pat
         </ul>
         <div class="app-links">
           <span class="btn btn--primary">Coming soon on the App Store &amp; Google Play</span>
-          {% if app.privacy_url %}<a class="btn btn--ghost" href="{{ app.privacy_url | relative_url }}">Privacy Policy</a>{% endif %}
-          {% if app.terms_url %}<a class="btn btn--ghost" href="{{ app.terms_url | relative_url }}">Terms</a>{% endif %}
         </div>
       </div>
 
@@ -51,6 +48,14 @@ description: "Binaural AudIo and CostCurrent — apps for iOS and Android by Pat
         {% endfor %}
       </div>
     </div>
+
+    {% if app.privacy_url or app.terms_url %}
+    <div class="legal-links">
+      {% if app.privacy_url %}<a href="{{ app.privacy_url | relative_url }}">Privacy Policy</a>{% endif %}
+      {% if app.privacy_url and app.terms_url %}<span class="legal-links__dot">·</span>{% endif %}
+      {% if app.terms_url %}<a href="{{ app.terms_url | relative_url }}">Terms of Use</a>{% endif %}
+    </div>
+    {% endif %}
   </div>
 </section>
 {% endfor %}
