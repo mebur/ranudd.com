@@ -1,3 +1,12 @@
+---
+layout: legal
+title: "Binaural AudIo — Privacy Policy"
+description: "Privacy Policy for the Binaural AudIo app."
+accent: "#7C6BFF"
+back_url: /#binaural-audio
+back_label: "Binaural AudIo"
+---
+
 **Privacy Policy**
 
 This privacy policy applies to the Binaural AudIo app for mobile devices, together with any related services operated by Patrik Ranudd (collectively, the "Application"). Patrik Ranudd is hereby referred to as the "Service Provider".

@@ -2,7 +2,7 @@ title: Patrik Ranudd
 description: "Indie apps built with a liquid-glass design language: Binaural AudIo and CostCurrent."
 url: "https://ranudd.com"
 author: Patrik Ranudd
-contact_email: privacy@ranudd.com
+contact_email: contact@ranudd.com
 
 markdown: kramdown
 sass:
@@ -34,7 +34,7 @@ apps:
       - "Built-in soundscape library: ocean, firepit, thunderstorm & more"
       - "Sleep timer with a gentle fade-out"
       - "100% on-device & private — nothing leaves your phone"
-    privacy_url: /PRIVACY.md
+    privacy_url: /privacy.html
     terms_url: null
     screenshots:
       - src: /assets/images/bna/screen-player.jpg
@@ -63,8 +63,8 @@ apps:
       - "Day-ahead price notifications & alerts"
       - "40+ European bidding zones & currencies"
       - "Home Screen widget with live price charts"
-    privacy_url: /CC_PRIVACY.md
-    terms_url: /CC_TERMS.mc
+    privacy_url: /cc-privacy.html
+    terms_url: /cc-terms.html
     screenshots:
       - src: /assets/images/costcurrent/screen-dashboard.jpg
         alt: "CostCurrent dashboard showing current spot price and 12h forecast chart"

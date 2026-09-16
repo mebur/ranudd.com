@@ -1,3 +1,12 @@
+---
+layout: legal
+title: "CostCurrent — Terms & Conditions"
+description: "Terms & Conditions for the CostCurrent app."
+accent: "#10B981"
+back_url: /#costcurrent
+back_label: "CostCurrent"
+---
+
 **Terms & Conditions**  
 
 These terms and conditions apply to the CostCurrent app for mobile devices, together with any related services operated by Patrik Ranudd (collectively, the "Application"). Patrik Ranudd is hereby referred to as the "Service Provider".
