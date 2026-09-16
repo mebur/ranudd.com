@@ -1,0 +1,30 @@
+<footer class="site-footer" id="contact">
+  <div class="wrap site-footer__inner">
+    <div class="site-footer__col">
+      <div class="site-nav__brand">
+        <span class="brand-dot"></span>
+        ranudd<span class="brand-dim">.com</span>
+      </div>
+      <p class="muted">Independent iOS apps designed by Patrik Ranudd.</p>
+    </div>
+
+    <div class="site-footer__col">
+      <h4>Binaural AudIo</h4>
+      <a href="{{ '/PRIVACY.md' | relative_url }}">Privacy Policy</a>
+    </div>
+
+    <div class="site-footer__col">
+      <h4>CostCurrent</h4>
+      <a href="{{ '/CC_PRIVACY.md' | relative_url }}">Privacy Policy</a>
+      <a href="{{ '/CC_TERMS.mc' | relative_url }}">Terms &amp; Conditions</a>
+    </div>
+
+    <div class="site-footer__col">
+      <h4>Contact</h4>
+      <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a>
+    </div>
+  </div>
+  <div class="wrap site-footer__legal muted">
+    &copy; {{ 'now' | date: "%Y" }} Patrik Ranudd. All rights reserved.
+  </div>
+</footer>

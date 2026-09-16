@@ -1,0 +1,74 @@
+title: Patrik Ranudd
+description: "Indie apps built with a liquid-glass design language: Binaural AudIo and CostCurrent."
+url: "https://ranudd.com"
+author: Patrik Ranudd
+contact_email: privacy@ranudd.com
+
+markdown: kramdown
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+apps:
+  - id: bna
+    name: "Binaural AudIo"
+    tagline: "Brainwave entrainment & AI soundscapes"
+    accent: "#7C6BFF"
+    accent_soft: "#DCE4FF"
+    icon: /assets/images/bna/icon.png
+    feature_graphic: /assets/images/bna/feature_graphic.png
+    description: >
+      Binaural-beat audio designed to entrain brainwave activity toward a target
+      mental state — focus, deep sleep, meditation, or relaxation — optionally
+      layered with an AI-generated ambient soundscape, entirely on-device.
+    highlights:
+      - "Binaural beats across Delta, Theta, Alpha, Beta & Gamma bands"
+      - "AI-generated ambient soundscapes, created on-device"
+      - "Built-in soundscape library: ocean, firepit, thunderstorm & more"
+      - "Sleep timer with a gentle fade-out"
+      - "100% on-device & private — nothing leaves your phone"
+    privacy_url: /PRIVACY.md
+    terms_url: null
+    screenshots:
+      - src: /assets/images/bna/screen-player.jpg
+        alt: "Binaural AudIo brainwave player showing the Alpha band selected"
+      - src: /assets/images/bna/screen-soundscapes.jpg
+        alt: "Soundscape picker with Ocean Beach, Old Clock, Submarine and AI options"
+      - src: /assets/images/bna/screen-ai-generator.jpg
+        alt: "AI soundscape generator with a text prompt field"
+      - src: /assets/images/bna/screen-timer.jpg
+        alt: "Gamma band screen with the sleep timer sheet open"
+
+  - id: costcurrent
+    name: "CostCurrent"
+    tagline: "Smart European electricity monitoring"
+    accent: "#10B981"
+    accent_soft: "#E0F2FE"
+    icon: /assets/images/costcurrent/icon.png
+    feature_graphic: /assets/images/costcurrent/feature_graphic.png
+    description: >
+      Real-time electricity spot price visualization with weather, wind and
+      solar overlays for 40+ European bidding zones — so you always know when
+      power is cheap.
+    highlights:
+      - "Spot prices in 15 & 60 minute resolution"
+      - "Weather, wind & solar overlay insights"
+      - "Day-ahead price notifications & alerts"
+      - "40+ European bidding zones & currencies"
+      - "Home Screen widget with live price charts"
+    privacy_url: /CC_PRIVACY.md
+    terms_url: /CC_TERMS.mc
+    screenshots:
+      - src: /assets/images/costcurrent/screen-dashboard.jpg
+        alt: "CostCurrent dashboard showing current spot price and 12h forecast chart"
+      - src: /assets/images/costcurrent/screen-settings.jpg
+        alt: "Electricity market zone and chart resolution settings"
+      - src: /assets/images/costcurrent/screen-alerts.jpg
+        alt: "VoltWatch Pro price alert threshold settings"

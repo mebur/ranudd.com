@@ -1,1 +1,62 @@
+---
+layout: default
+title: Home
+description: "Binaural AudIo and CostCurrent — two indie iOS apps by Patrik Ranudd, built with a shared liquid-glass design language."
+---
 
+<section class="hero wrap">
+  <span class="hero__eyebrow">Indie apps · designed &amp; built by Patrik Ranudd</span>
+  <h1>Two focused apps, one liquid‑glass design language.</h1>
+  <p>Binaural AudIo helps you focus, sleep and relax. CostCurrent keeps you ahead of electricity prices. Both are private by default and built entirely for iOS.</p>
+  <div class="hero__apps">
+    <a class="hero__app-chip" href="#binaural-audio">
+      <img src="{{ '/assets/images/bna/icon.png' | relative_url }}" alt="">
+      Binaural AudIo
+    </a>
+    <a class="hero__app-chip" href="#costcurrent">
+      <img src="{{ '/assets/images/costcurrent/icon.png' | relative_url }}" alt="">
+      CostCurrent
+    </a>
+  </div>
+</section>
+
+{% for app in site.apps %}
+<section class="app-section app-section--{{ app.id }}" id="{{ app.id | replace: 'bna', 'binaural-audio' }}" style="--accent: {{ app.accent }}; --accent-soft: {{ app.accent_soft }};">
+  <div class="wrap">
+    <div class="app-hero">
+      <img class="app-hero__icon" src="{{ app.icon | relative_url }}" alt="{{ app.name }} app icon">
+      <div>
+        <h2 class="app-hero__title">{{ app.name }}</h2>
+        <div class="app-hero__tagline">{{ app.tagline }}</div>
+      </div>
+    </div>
+
+    <img class="feature-graphic" src="{{ app.feature_graphic | relative_url }}" alt="{{ app.name }} feature graphic">
+
+    <p class="app-description">{{ app.description }}</p>
+
+    <div class="app-grid">
+      <div>
+        <ul class="highlight-list">
+          {% for h in app.highlights %}
+          <li>{{ h }}</li>
+          {% endfor %}
+        </ul>
+        <div class="app-links">
+          <span class="btn btn--primary">Coming soon on the App Store</span>
+          {% if app.privacy_url %}<a class="btn btn--ghost" href="{{ app.privacy_url | relative_url }}">Privacy Policy</a>{% endif %}
+          {% if app.terms_url %}<a class="btn btn--ghost" href="{{ app.terms_url | relative_url }}">Terms</a>{% endif %}
+        </div>
+      </div>
+
+      <div class="screens">
+        {% for shot in app.screenshots %}
+        <figure>
+          <img src="{{ shot.src | relative_url }}" alt="{{ shot.alt }}" loading="lazy">
+        </figure>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endfor %}
