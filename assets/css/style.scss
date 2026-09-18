@@ -170,16 +170,6 @@ h1, h2, h3, h4 {
 .app-section--bna { --accent: var(--bna); --accent-soft: var(--bna-soft); }
 .app-section--costcurrent { --accent: var(--cc); --accent-soft: var(--cc-soft); }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px; height: 1px;
-  padding: 0; margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
 .app-description {
   max-width: 640px;
   color: var(--ink-dim);
@@ -258,14 +248,45 @@ h1, h2, h3, h4 {
 .legal-links a:hover { color: var(--ink); }
 .legal-links__dot { color: var(--ink-dim); }
 
-.feature-graphic {
-  width: 100%;
+.hero-pane {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  aspect-ratio: 1024 / 500;
   margin-top: 8px;
+  margin-bottom: 32px;
+  padding: 0 48px;
   border-radius: var(--radius-card);
   border: 1px solid var(--glass-border);
   box-shadow: 0 30px 60px -30px rgba(0,0,0,0.6);
-  margin-bottom: 32px;
-  display: block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero-pane__icon {
+  flex: none;
+  width: 112px;
+  height: 112px;
+  border-radius: 26px;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.12), 0 16px 40px -12px color-mix(in srgb, var(--accent) 65%, transparent);
+}
+.hero-pane__text { min-width: 0; }
+.hero-pane__title {
+  margin: 0 0 6px;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.45);
+}
+.hero-pane__title-mono {
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+.hero-pane__tagline {
+  margin: 0;
+  color: rgba(245,244,255,0.82);
+  font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+  text-shadow: 0 2px 12px rgba(0,0,0,0.45);
 }
 
 .screens {
@@ -293,6 +314,21 @@ h1, h2, h3, h4 {
 @media (max-width: 860px) {
   .app-grid { grid-template-columns: 1fr; }
   .app-description { margin-left: auto; margin-right: auto; text-align: center; }
+  .hero-pane { aspect-ratio: auto; padding: 32px 24px; }
+}
+
+@media (max-width: 760px) {
+  .screens { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  .hero-pane {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 28px 20px;
+  }
+  .hero-pane__icon { width: 88px; height: 88px; }
 }
 
 /* ---- footer ---- */

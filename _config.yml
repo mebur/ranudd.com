@@ -24,6 +24,8 @@ apps:
     accent_soft: "#DCE4FF"
     icon: /assets/images/bna/icon.png
     feature_graphic: /assets/images/bna/feature_graphic.png
+    hero_bg: /assets/images/bna/hero-bg.jpg
+    name_mono: true
     description: >
       Binaural-beat audio designed to entrain brainwave activity toward a target
       mental state — focus, deep sleep, meditation, or relaxation — optionally
@@ -51,6 +53,9 @@ apps:
     accent_soft: "#E0F2FE"
     icon: /assets/images/costcurrent/icon.png
     feature_graphic: /assets/images/costcurrent/feature_graphic.png
+    hero_bg: /assets/images/costcurrent/hero-bg.jpg
+    name_mono_suffix: "Current"
+    name_mono_color: "#00E5FF"
     description: >
       Real-time electricity spot price visualization with weather, wind and
       solar overlays for 40+ European bidding zones — so you always know when

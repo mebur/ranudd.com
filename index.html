@@ -22,9 +22,21 @@ description: "Binaural AudIo and CostCurrent — apps for iOS and Android by Pat
 {% for app in site.apps %}
 <section class="app-section app-section--{{ app.id }}" id="{{ app.id | replace: 'bna', 'binaural-audio' }}" style="--accent: {{ app.accent }}; --accent-soft: {{ app.accent_soft }};">
   <div class="wrap">
-    <h2 class="visually-hidden">{{ app.name }} — {{ app.tagline }}</h2>
-
-    <img class="feature-graphic" src="{{ app.feature_graphic | relative_url }}" alt="{{ app.name }} feature graphic: {{ app.tagline }}">
+    <div class="hero-pane" style="background-image: linear-gradient(120deg, rgba(6,8,16,0.65) 0%, rgba(6,8,16,0.15) 45%, rgba(6,8,16,0.45) 100%), url('{{ app.hero_bg | relative_url }}');">
+      <img class="hero-pane__icon" src="{{ app.icon | relative_url }}" alt="">
+      <div class="hero-pane__text">
+        <h2 class="hero-pane__title">
+          {% if app.name_mono_suffix %}
+          {{ app.name | remove: app.name_mono_suffix }}<span class="hero-pane__title-mono" style="color: {{ app.name_mono_color }};">{{ app.name_mono_suffix }}</span>
+          {% elsif app.name_mono %}
+          <span class="hero-pane__title-mono">{{ app.name }}</span>
+          {% else %}
+          {{ app.name }}
+          {% endif %}
+        </h2>
+        <p class="hero-pane__tagline">{{ app.tagline }}</p>
+      </div>
+    </div>
 
     <p class="app-description">{{ app.description }}</p>
 
