@@ -43,8 +43,8 @@ description: "Binaural AudIo and CostCurrent — apps for iOS and Android by Pat
         {% if app.hero_pills %}
         <div class="hero-pane__pills">
           {% for pill in app.hero_pills %}
-          <div class="hero-pane__pill">
-            <span class="hero-pane__pill-dot" style="--dot-color: {{ pill.color }};"></span>
+          <div class="hero-pane__pill" style="--pill-color: {{ pill.color }};">
+            <span class="hero-pane__pill-dot"></span>
             <span class="hero-pane__pill-label">{{ pill.label }}</span>
           </div>
           {% endfor %}
@@ -61,25 +61,16 @@ description: "Binaural AudIo and CostCurrent — apps for iOS and Android by Pat
 
     <p class="app-description">{{ app.description }}</p>
 
-    <div class="app-grid">
-      <div>
-        <ul class="highlight-list">
-          {% for h in app.highlights %}
-          <li>{{ h }}</li>
-          {% endfor %}
-        </ul>
-        <div class="app-links">
-          <span class="btn btn--primary">Coming soon on the App Store &amp; Google Play</span>
-        </div>
-      </div>
+    <div class="screens">
+      {% for shot in app.screenshots %}
+      <figure>
+        <img src="{{ shot.src | relative_url }}" alt="{{ shot.alt }}" loading="lazy">
+      </figure>
+      {% endfor %}
+    </div>
 
-      <div class="screens">
-        {% for shot in app.screenshots %}
-        <figure>
-          <img src="{{ shot.src | relative_url }}" alt="{{ shot.alt }}" loading="lazy">
-        </figure>
-        {% endfor %}
-      </div>
+    <div class="app-cta">
+      <span class="btn btn--primary">Coming soon on the App Store &amp; Google Play</span>
     </div>
 
     {% if app.privacy_url or app.terms_url %}

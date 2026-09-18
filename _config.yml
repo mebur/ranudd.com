@@ -27,23 +27,19 @@ apps:
     hero_bg: /assets/images/bna/hero-bg.jpg
     name_mono: true
     hero_pills:
-      - label: "Binaural Beats (Alpha, Theta, Delta)"
+      - label: "Binaural Beats (Alpha, Theta, Delta, Beta, Gamma)"
         color: "#7C6BFF"
       - label: "AI Ambient Soundscapes"
         color: "#38BDF8"
+      - label: "Soundscape Library & Gentle Sleep Timer"
+        color: "#A855F7"
       - label: "100% On-Device & Private"
         color: "#EC4899"
-    hero_tags: "Focus • Deep Sleep • Meditation • Relaxation"
+    hero_tags: "Focus  •  Deep Sleep  •  Meditation  •  Relaxation"
     description: >
       Binaural-beat audio designed to entrain brainwave activity toward a target
       mental state — focus, deep sleep, meditation, or relaxation — optionally
       layered with an AI-generated ambient soundscape, entirely on-device.
-    highlights:
-      - "Binaural beats across Delta, Theta, Alpha, Beta & Gamma bands"
-      - "AI-generated ambient soundscapes, created on-device"
-      - "Built-in soundscape library: ocean, firepit, thunderstorm & more"
-      - "Sleep timer with a gentle fade-out"
-      - "100% on-device & private — nothing leaves your phone"
     privacy_url: /privacy.html
     terms_url: null
     screenshots:
@@ -69,19 +65,15 @@ apps:
         color: "#10B981"
       - label: "Weather, Wind & Solar Insights"
         color: "#00E5FF"
-      - label: "40+ European Bidding Zones"
+      - label: "40+ European Bidding Zones & Currencies"
         color: "#F59E0B"
-    hero_tags: "Day-Ahead Alerts • Weather Overlays • 40+ Zones • Home Screen Widgets"
+      - label: "Day-Ahead Alerts & Home Screen Widgets"
+        color: "#38BDF8"
+    hero_tags: "Live Electricity Prices  •  Day-Ahead Forecasts  •  40+ Zones  •  Home Screen Widgets"
     description: >
       Real-time electricity spot price visualization with weather, wind and
       solar overlays for 40+ European bidding zones — so you always know when
       power is cheap.
-    highlights:
-      - "Spot prices in 15 & 60 minute resolution"
-      - "Weather, wind & solar overlay insights"
-      - "Day-ahead price notifications & alerts"
-      - "40+ European bidding zones & currencies"
-      - "Home Screen widget with live price charts"
     privacy_url: /cc-privacy.html
     terms_url: /cc-terms.html
     screenshots:

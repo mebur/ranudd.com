@@ -171,48 +171,20 @@ h1, h2, h3, h4 {
 .app-section--costcurrent { --accent: var(--cc); --accent-soft: var(--cc-soft); }
 
 .app-description {
-  max-width: 640px;
+  max-width: 680px;
   color: var(--ink-dim);
   font-size: 1.05rem;
-  margin-bottom: 32px;
+  line-height: 1.6;
+  margin: 0 auto 36px;
+  text-align: center;
 }
 
-.app-grid {
-  display: grid;
-  grid-template-columns: minmax(260px, 380px) 1fr;
-  gap: 40px;
-  align-items: start;
-}
-
-.highlight-list {
-  list-style: none;
-  margin: 0 0 28px;
-  padding: 0;
+.app-cta {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.highlight-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  padding: 14px 16px;
-  border-radius: var(--radius-control);
-  font-size: 0.98rem;
-}
-.highlight-list li::before {
-  content: "";
-  flex: none;
-  width: 10px; height: 10px;
-  margin-top: 6px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 10px color-mix(in srgb, var(--accent) 70%, transparent);
+  justify-content: center;
+  margin: 36px 0 0;
 }
 
-.app-links { display: flex; gap: 12px; flex-wrap: wrap; }
 .btn {
   display: inline-flex;
   align-items: center;
@@ -237,8 +209,8 @@ h1, h2, h3, h4 {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin-top: 40px;
-  font-size: 0.8rem;
+  margin-top: 32px;
+  font-size: 0.82rem;
 }
 .legal-links a {
   color: var(--ink-dim);
@@ -311,41 +283,41 @@ h1, h2, h3, h4 {
 .hero-pane__pill {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
+  gap: 10px;
   padding: 8px 16px;
   border-radius: var(--radius-pill);
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1.5px solid var(--pill-color, rgba(255, 255, 255, 0.22));
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25), inset 0 0 12px color-mix(in srgb, var(--pill-color, transparent) 12%, transparent);
 }
 .hero-pane__pill-dot {
   flex: none;
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--dot-color, var(--accent));
-  box-shadow: 0 0 8px var(--dot-color, var(--accent)), 0 0 2px var(--dot-color, var(--accent));
+  background: var(--pill-color, var(--accent));
+  box-shadow: 0 0 10px var(--pill-color, var(--accent)), 0 0 3px #fff;
 }
 .hero-pane__pill-label {
-  font-size: clamp(0.8rem, 1.1vw, 0.92rem);
+  font-size: clamp(0.78rem, 1.05vw, 0.9rem);
   font-weight: 600;
-  color: #f5f3ff;
-  text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+  color: #f8fafc;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
   white-space: nowrap;
 }
 .hero-pane__footer {
-  font-size: clamp(0.75rem, 1vw, 0.88rem);
-  color: rgba(200, 210, 235, 0.75);
-  letter-spacing: 0.03em;
-  text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+  font-size: clamp(0.75rem, 0.95vw, 0.85rem);
+  color: rgba(160, 174, 192, 0.7);
+  letter-spacing: 0.04em;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
 }
 
 .screens {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 .screens figure { margin: 0; }
 .screens img {
@@ -365,8 +337,6 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 860px) {
-  .app-grid { grid-template-columns: 1fr; }
-  .app-description { margin-left: auto; margin-right: auto; text-align: center; }
   .hero-pane { aspect-ratio: auto; padding: 28px 22px; }
   .hero-pane__content { gap: 16px; }
   .hero-pane__pill-label { white-space: normal; }
