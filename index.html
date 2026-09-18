@@ -22,19 +22,40 @@ description: "Binaural AudIo and CostCurrent — apps for iOS and Android by Pat
 {% for app in site.apps %}
 <section class="app-section app-section--{{ app.id }}" id="{{ app.id | replace: 'bna', 'binaural-audio' }}" style="--accent: {{ app.accent }}; --accent-soft: {{ app.accent_soft }};">
   <div class="wrap">
-    <div class="hero-pane" style="background-image: linear-gradient(120deg, rgba(6,8,16,0.65) 0%, rgba(6,8,16,0.15) 45%, rgba(6,8,16,0.45) 100%), url('{{ app.hero_bg | relative_url }}');">
-      <img class="hero-pane__icon" src="{{ app.icon | relative_url }}" alt="">
-      <div class="hero-pane__text">
-        <h2 class="hero-pane__title">
-          {% if app.name_mono_suffix %}
-          {{ app.name | remove: app.name_mono_suffix }}<span class="hero-pane__title-mono" style="color: {{ app.name_mono_color }};">{{ app.name_mono_suffix }}</span>
-          {% elsif app.name_mono %}
-          <span class="hero-pane__title-mono">{{ app.name }}</span>
-          {% else %}
-          {{ app.name }}
-          {% endif %}
-        </h2>
-        <p class="hero-pane__tagline">{{ app.tagline }}</p>
+    <div class="hero-pane" style="background-image: linear-gradient(120deg, rgba(6,8,16,0.72) 0%, rgba(6,8,16,0.22) 50%, rgba(6,8,16,0.55) 100%), url('{{ app.hero_bg | relative_url }}');">
+      <div class="hero-pane__content">
+        <div class="hero-pane__header">
+          <img class="hero-pane__icon" src="{{ app.icon | relative_url }}" alt="">
+          <div class="hero-pane__text">
+            <h2 class="hero-pane__title">
+              {% if app.name_mono_suffix %}
+              {{ app.name | remove: app.name_mono_suffix }}<span class="hero-pane__title-mono" style="color: {{ app.name_mono_color }};">{{ app.name_mono_suffix }}</span>
+              {% elsif app.name_mono %}
+              <span class="hero-pane__title-mono">{{ app.name }}</span>
+              {% else %}
+              {{ app.name }}
+              {% endif %}
+            </h2>
+            <p class="hero-pane__tagline">{{ app.tagline }}</p>
+          </div>
+        </div>
+
+        {% if app.hero_pills %}
+        <div class="hero-pane__pills">
+          {% for pill in app.hero_pills %}
+          <div class="hero-pane__pill">
+            <span class="hero-pane__pill-dot" style="--dot-color: {{ pill.color }};"></span>
+            <span class="hero-pane__pill-label">{{ pill.label }}</span>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if app.hero_tags %}
+        <div class="hero-pane__footer">
+          {{ app.hero_tags }}
+        </div>
+        {% endif %}
       </div>
     </div>
 

@@ -26,6 +26,14 @@ apps:
     feature_graphic: /assets/images/bna/feature_graphic.png
     hero_bg: /assets/images/bna/hero-bg.jpg
     name_mono: true
+    hero_pills:
+      - label: "Binaural Beats (Alpha, Theta, Delta)"
+        color: "#7C6BFF"
+      - label: "AI Ambient Soundscapes"
+        color: "#38BDF8"
+      - label: "100% On-Device & Private"
+        color: "#EC4899"
+    hero_tags: "Focus • Deep Sleep • Meditation • Relaxation"
     description: >
       Binaural-beat audio designed to entrain brainwave activity toward a target
       mental state — focus, deep sleep, meditation, or relaxation — optionally
@@ -56,6 +64,14 @@ apps:
     hero_bg: /assets/images/costcurrent/hero-bg.jpg
     name_mono_suffix: "Current"
     name_mono_color: "#00E5FF"
+    hero_pills:
+      - label: "Real-time Spot Prices (15m & 60m)"
+        color: "#10B981"
+      - label: "Weather, Wind & Solar Insights"
+        color: "#00E5FF"
+      - label: "40+ European Bidding Zones"
+        color: "#F59E0B"
+    hero_tags: "Day-Ahead Alerts • Weather Overlays • 40+ Zones • Home Screen Widgets"
     description: >
       Real-time electricity spot price visualization with weather, wind and
       solar overlays for 40+ European bidding zones — so you always know when
