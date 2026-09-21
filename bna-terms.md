@@ -1,15 +1,14 @@
----
 layout: legal
-title: "CostCurrent — Terms & Conditions"
-description: "Terms & Conditions for the CostCurrent app."
-accent: "#10B981"
-back_url: /#costcurrent
-back_label: "CostCurrent"
+title: "Binaural AudIo — Terms & Conditions"
+description: "Terms and Conditions for the Binaural AudIo app."
+accent: "#7C6BFF"
+back_url: /#binaural-audio
+back_label: "Binaural AudIo"
 ---
 
 **Terms & Conditions**  
 
-These terms and conditions apply to the CostCurrent app for mobile devices, together with any related services operated by Patrik Ranudd (collectively, the "Application"). Patrik Ranudd is hereby referred to as the "Service Provider".
+These terms and conditions apply to the Binaural AudIo app for mobile devices, together with any related services operated by Patrik Ranudd (collectively, the "Application"). Patrik Ranudd is hereby referred to as the "Service Provider".
 
 By downloading or using the Application, you agree to these Terms and Conditions. You should read them carefully before using the Application.
 
@@ -146,4 +145,4 @@ These terms and conditions are effective as of 2026-09-21
 
 **Contact Us**
 
-If you have any questions or suggestions about the Terms and Conditions, please do not hesitate to contact the Service Provider at privacy@ranudd.com.
+If you have any questions or suggestions about the Terms and Conditio

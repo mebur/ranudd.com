@@ -40,8 +40,8 @@ apps:
       Binaural-beat audio designed to entrain brainwave activity toward a target
       mental state — focus, deep sleep, meditation, or relaxation — optionally
       layered with an AI-generated ambient soundscape, entirely on-device.
-    privacy_url: /privacy.html
-    terms_url: null
+    privacy_url: /bna-privacy.html
+    terms_url: /bna-terms.html
     screenshots:
       - src: /assets/images/bna/screen-player.jpg
         alt: "Binaural AudIo brainwave player showing the Alpha band selected"
