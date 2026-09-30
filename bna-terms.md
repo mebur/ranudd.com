@@ -1,3 +1,4 @@
+---
 layout: legal
 title: "Binaural AudIo — Terms & Conditions"
 description: "Terms and Conditions for the Binaural AudIo app."
