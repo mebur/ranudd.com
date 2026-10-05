@@ -7,17 +7,15 @@
       </div>
     </div>
 
+    {% for app in site.apps %}
     <div class="site-footer__col">
-      <h4>Binaural AudIo</h4>
-      <a href="{{ '/bna-privacy.html' | relative_url }}">Privacy Policy</a>
-      <a href="{{ '/bna-terms.html' | relative_url }}">Terms &amp; Conditions</a>
+      <h4>{{ app.name }}</h4>
+      {% if app.privacy_url or app.terms_url %}
+      {% if app.privacy_url %}<a href="{{ app.privacy_url | relative_url }}">Privacy Policy</a>{% endif %}
+      {% if app.terms_url %}<a href="{{ app.terms_url | relative_url }}">Terms of Use</a>{% endif %}
+      {% endif %}
     </div>
-
-    <div class="site-footer__col">
-      <h4>CostCurrent</h4>
-      <a href="{{ '/cc-privacy.html' | relative_url }}">Privacy Policy</a>
-      <a href="{{ '/cc-terms.html' | relative_url }}">Terms &amp; Conditions</a>
-    </div>
+    {% endfor %}
 
     <div class="site-footer__col">
       <h4>Contact</h4>
