@@ -141,7 +141,7 @@ apps:
         color: "#F59E0B"
       - label: "Day-Ahead Alerts & Home Screen Widgets"
         color: "#38BDF8"
-    hero_tags: "Live Electricity Prices  •  Day-Ahead Forecasts  •  40+ Zones  •  Home Screen Widgets"
+    hero_tags: "Live Electricity Prices  •  Day-Ahead Forecasts  •  Solar Output Prediction"
     description: >
       Real-time and day-ahead electricity spot prices across 40+ European
       bidding zones, visualized alongside hyper-local weather, wind, and solar
@@ -160,7 +160,7 @@ apps:
         title: "40+ European Bidding Zones"
         body: "Full ENTSO-E coverage, from Sweden's SE1–SE4 and Norway's NO1–NO5 to Germany, Denmark, Finland and beyond."
       - icon: "🌦️"
-        title: "Hyper-Local Weather"
+        title: "Local Weather"
         body: "Hourly temperature, wind speed, cloud cover, solar radiation and snow depth sourced from Open-Meteo."
       - icon: "☀️"
         title: "High-Precision Solar Forecasting"
