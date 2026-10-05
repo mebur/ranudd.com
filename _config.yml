@@ -37,9 +37,14 @@ apps:
         color: "#EC4899"
     hero_tags: "Focus  •  Deep Sleep  •  Meditation  •  Relaxation"
     description: >
-      Binaural-beat audio designed to entrain brainwave activity toward a target
-      mental state — focus, deep sleep, meditation, or relaxation — optionally
-      layered with an AI-generated ambient soundscape, entirely on-device.
+      Binaural-beat audio engineered to guide your brainwave activity toward a
+      target mental state — deep sleep, meditation, relaxed focus, or sharp
+      concentration — across all five brainwave bands (Delta through Gamma).
+      Layer in an AI-generated ambient soundscape from a simple text prompt,
+      or pick from a curated library, with seamless evolving loops that never
+      feel repetitive. Everything runs 100% on-device, so your listening
+      habits and prompts stay completely private, with background playback
+      and lock screen controls for uninterrupted sessions.
     privacy_url: /privacy.html
     terms_url: null
     screenshots:
@@ -71,9 +76,13 @@ apps:
         color: "#38BDF8"
     hero_tags: "Live Electricity Prices  •  Day-Ahead Forecasts  •  40+ Zones  •  Home Screen Widgets"
     description: >
-      Real-time electricity spot price visualization with weather, wind and
-      solar overlays for 40+ European bidding zones — so you always know when
-      power is cheap.
+      Real-time and day-ahead electricity spot prices across 40+ European
+      bidding zones, visualized alongside hyper-local weather, wind, and solar
+      radiation data. A physics-based solar forecasting engine predicts your
+      panels' output hour by hour, accounting for sun position, cloud cover,
+      temperature, and even snow cover, while smart insights surface the
+      cheapest hours to use power each day. Stay informed at a glance with
+      home screen widgets and day-ahead price alerts.
     privacy_url: /cc-privacy.html
     terms_url: /cc-terms.html
     screenshots:
