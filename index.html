@@ -61,6 +61,18 @@ description: "Binaural AudIo and CostCurrent — apps for iOS and Android by Pat
 
     <p class="app-description">{{ app.description }}</p>
 
+    {% if app.features %}
+    <div class="features">
+      {% for feature in app.features %}
+      <div class="feature-card">
+        <span class="feature-card__icon">{{ feature.icon }}</span>
+        <h3 class="feature-card__title">{{ feature.title }}</h3>
+        <p class="feature-card__body">{{ feature.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
     <div class="screens">
       {% for shot in app.screenshots %}
       <figure>
@@ -68,6 +80,30 @@ description: "Binaural AudIo and CostCurrent — apps for iOS and Android by Pat
       </figure>
       {% endfor %}
     </div>
+
+    {% if app.deep_dive %}
+    <details class="deep-dive">
+      <summary class="deep-dive__summary">
+        <span class="deep-dive__summary-text">
+          <span class="deep-dive__kicker">Under the hood</span>
+          <span class="deep-dive__title">{{ app.deep_dive.title }}</span>
+        </span>
+        <span class="deep-dive__chevron" aria-hidden="true"></span>
+      </summary>
+      <div class="deep-dive__content">
+        <p class="deep-dive__intro">{{ app.deep_dive.intro }}</p>
+        {% for section in app.deep_dive.sections %}
+        <div class="deep-dive__section">
+          <h4 class="deep-dive__heading">{{ section.heading }}</h4>
+          <p class="deep-dive__body">{{ section.body }}</p>
+          {% if section.formula %}
+          <code class="deep-dive__formula">{{ section.formula }}</code>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </details>
+    {% endif %}
 
     <div class="app-cta">
       <span class="btn btn--primary">Coming soon on the App Store &amp; Google Play</span>

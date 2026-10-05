@@ -47,6 +47,73 @@ apps:
       and lock screen controls for uninterrupted sessions.
     privacy_url: /privacy.html
     terms_url: null
+    features:
+      - icon: "🎧"
+        title: "Precision Binaural Beat Engine"
+        body: "Real-time, continuous-phase stereo tone synthesis across all five brainwave bands — Delta, Theta, Alpha, Beta and Gamma."
+      - icon: "🎚️"
+        title: "Custom Carrier & Beat Tuning"
+        body: "Granular carrier frequency selection (200–400 Hz) with micro-Hz beat calibration for a tuned, personal session."
+      - icon: "✨"
+        title: "On-Device Generative AI Soundscapes"
+        body: "Local text-to-audio generation — 100% offline and private, with no prompts or audio ever leaving your device."
+      - icon: "🔁"
+        title: "Dynamic Segment Rotation"
+        body: "A staggered 3-segment loop engine regenerates ambient textures on the fly so sessions never feel repetitive."
+      - icon: "🧪"
+        title: "Acoustic Post-Processing"
+        body: "Low-pass filtering and de-spiking keep AI-generated audio smooth and artifact-free."
+      - icon: "💧"
+        title: "Liquid Glass UI"
+        body: "Frosted-glass design with dynamic blur, specular highlights, spring physics, and full light/dark support."
+      - icon: "🔒"
+        title: "Background Playback & Lock Screen Controls"
+        body: "Uninterrupted background audio with media controls right from your lock screen."
+      - icon: "💾"
+        title: "Smart Audio Cache"
+        body: "Persistent local metadata tracking with automatic least-recently-used cache eviction."
+    deep_dive:
+      title: "Acoustics, Mathematics & Synthesis Architecture"
+      intro: >
+        The audio pipeline bridges psychoacoustics, digital signal processing,
+        and on-device neural diffusion modeling to generate every sound you hear.
+      sections:
+        - heading: "Binaural Beat Tone Synthesis"
+          body: >
+            A binaural beat is an auditory illusion perceived when two pure
+            tones with slightly differing frequencies are played dichotically,
+            one in each ear, over stereo headphones. The perceived beat
+            frequency matches the difference between the two carrier tones.
+          formula: "f_L = f_carrier − f_beat ÷ 2        f_R = f_carrier + f_beat ÷ 2"
+        - heading: "Brainwave Bands & Psychoacoustic Mapping"
+          body: >
+            Delta (0.1–3 Hz) targets deep slow-wave sleep and restoration.
+            Theta (4–7 Hz) supports meditation, REM dreaming and memory
+            consolidation. Alpha (8–15 Hz) encourages relaxed focus and
+            creative flow. Beta (16–30 Hz) sharpens active concentration.
+            Gamma (31–100 Hz) is associated with peak insight and heightened
+            awareness.
+        - heading: "Seamless Equal-Power Loop Crossfading"
+          body: >
+            To eliminate audible clicks at loop boundaries, each loop is
+            rendered with extra continuation samples blended back into its
+            head using an equal-power circular curve, so perceived loudness
+            stays constant across the seam.
+          formula: "head[i] = x[i]·cos(θ) + x[loop+i]·sin(θ), where cos²(θ) + sin²(θ) = 1"
+        - heading: "On-Device Generative AI & Latent Audio Decoding"
+          body: >
+            Text prompts are processed entirely on-device via a quantized
+            neural diffusion model. A Snake activation function models
+            organic acoustic harmonics with continuous-phase frequency
+            scaling, while multi-band latent resonance drives soft-clipped
+            waveform synthesis.
+          formula: "Snake(x, α) = x + (1 ÷ α)·sin²(αx)"
+        - heading: "Acoustic Filter Chain & Artifact Suppression"
+          body: >
+            Generated audio passes through a single-pole RC low-pass filter
+            to tame high-frequency noise, a median-of-3 de-spike filter to
+            suppress isolated sample spikes, and peak normalization to keep
+            levels consistent — all without degrading transients.
     screenshots:
       - src: /assets/images/bna/screen-player.jpg
         alt: "Binaural AudIo brainwave player showing the Alpha band selected"
@@ -85,6 +152,67 @@ apps:
       home screen widgets and day-ahead price alerts.
     privacy_url: /cc-privacy.html
     terms_url: /cc-terms.html
+    features:
+      - icon: "📈"
+        title: "Spot Price Visualization"
+        body: "Real-time electricity prices rendered as stepped-line, smooth line, or bar charts — however you like to read the market."
+      - icon: "🌍"
+        title: "40+ European Bidding Zones"
+        body: "Full ENTSO-E coverage, from Sweden's SE1–SE4 and Norway's NO1–NO5 to Germany, Denmark, Finland and beyond."
+      - icon: "🌦️"
+        title: "Hyper-Local Weather"
+        body: "Hourly temperature, wind speed, cloud cover, solar radiation and snow depth sourced from Open-Meteo."
+      - icon: "☀️"
+        title: "High-Precision Solar Forecasting"
+        body: "A physics-based engine predicts your panels' output hour by hour, modelling optical, thermal and weather effects."
+      - icon: "💡"
+        title: "Smart Insights"
+        body: "Daily price extremes, cheapest consumption windows, and tomorrow's forecast summarized at a glance."
+      - icon: "📱"
+        title: "Home & Lock Screen Widgets"
+        body: "Live prices and forecasts on your home screen for iOS and Android, without opening the app."
+      - icon: "📡"
+        title: "Offline-First Persistence"
+        body: "Local SQLite storage keeps your prices, forecasts and alerts available even without a connection."
+    deep_dive:
+      title: "Solar Production Calculations"
+      intro: >
+        The SolarCalculator engine models the physical journey of sunlight —
+        from extraterrestrial solar coordinates down to real inverter AC
+        output — for your exact panel setup and location.
+      sections:
+        - heading: "Solar Position (NOAA Algorithms)"
+          body: >
+            Sun elevation and azimuth are computed from the UTC timestamp,
+            latitude and longitude using the day-of-year angle, the equation
+            of time, solar declination, and the true solar hour angle.
+        - heading: "Angle of Incidence & Optical Losses"
+          body: >
+            The angle of incidence on tilted panels combines sun elevation,
+            azimuth and panel orientation. Reflection losses at oblique
+            angles are modeled with the ASHRAE glass model, while the
+            Kasten-Young air mass formula and a spectral mismatch factor
+            correct for atmospheric scattering and spectrum reddening near
+            sunrise and sunset.
+        - heading: "Plane-of-Array Irradiance (Hay-Davies Model)"
+          body: >
+            Total irradiance striking the panel combines direct beam light,
+            anisotropic circumsolar and isotropic diffuse sky light, and
+            ground-reflected albedo — with albedo dynamically boosted by
+            nearby snow cover.
+        - heading: "Snow Attenuation, Wind Cooling & Temperature Derating"
+          body: >
+            Snow coverage attenuates light following the Beer-Lambert law,
+            adjusted for panel tilt and ambient temperature. Cell operating
+            temperature is estimated with the Faiman convective wind-cooling
+            model, and silicon output is derated roughly 0.4% per degree
+            above standard test conditions.
+        - heading: "Inverter Efficiency & Final Output"
+          body: >
+            A part-load inverter efficiency curve captures tare and
+            low-irradiance losses before the final AC power is clamped to
+            the system's rated peak, then summed hour by hour into a daily
+            kWh generation forecast.
     screenshots:
       - src: /assets/images/costcurrent/screen-dashboard.jpg
         alt: "CostCurrent dashboard showing current spot price and 12h forecast chart"
